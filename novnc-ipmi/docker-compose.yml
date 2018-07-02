@@ -1,0 +1,12 @@
+# https://docs.docker.com/compose/compose-file/compose-versioning/#version-2
+# https://docs.docker.com/compose/compose-file/compose-file-v2/
+
+version: '2'
+
+services:
+  novnc-ipmi:
+    container_name: novnc-ipmi
+    build: .
+    image: kubao/novnc-ipmi
+    ports:
+      - "8080"

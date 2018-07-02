@@ -1,0 +1,9 @@
+# version 1 - only because of old CentOS this has to run on
+# See https://docs.docker.com/compose/compose-file/compose-versioning/#version-1
+
+novnc-ipmi:
+	container_name: novnc-ipmi
+	build: .
+	ports:
+		- "8080:80/tcp"
+# image: kubao/novnc-ipmi
