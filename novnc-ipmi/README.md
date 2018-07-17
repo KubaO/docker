@@ -10,11 +10,11 @@ SuperMicro motherboard IPMI implementation.
 
 ## Quickstart
 
-    $ docker run --rm -it -p 8080:8080 kubao/novnc-ipmi --listen 8080 --vnc host:5600
+    $ docker run --rm -it -p 8080:8080 kubao/novnc-ipmi --listen 8080 --vnc host:5900
 
 Open a browser and navigate to `http://<CONTAINER_ADDRESS>:8080/vnc.html`. The
-host you are connecting to is *not* the VNC host, but the websocket host. By
-default, this won't be useful to connect to non-websocket VNC host: the
+host you are connecting to via noVNC is *not* the VNC host, but the websocket host. By
+default, this won't be useful to connect to a non-websocket VNC host: the
 websockify running in the container only allows connections to localhost by
 default. See the following section for how to set VNC hosts to connect to.
 
