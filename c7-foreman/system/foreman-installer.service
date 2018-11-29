@@ -1,0 +1,12 @@
+[Unit]
+Description=Foreman Installer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/foreman-installer --foreman-admin-password=changeme
+#ExecStart=/usr/bin/systemctl halt
+StandardInput=tty
+StandardOutput=tty
+
+[Install]
+WantedBy=foreman-install.target

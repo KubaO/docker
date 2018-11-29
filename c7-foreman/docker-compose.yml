@@ -1,7 +1,8 @@
 version: '3'
 services:
     foreman:
-        build: .
+        build:
+          context: .
         image: c7-foreman
         hostname: foreman.local
         cap_add: [SYS_ADMIN]
