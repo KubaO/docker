@@ -1,0 +1,10 @@
+version: '3'
+services:
+    foreman:
+        build: .
+        image: c7-foreman
+        hostname: foreman.local
+        cap_add: [SYS_ADMIN]
+        tmpfs:
+          - /run
+        ports: ["8443:8443", "8140:8140"]
