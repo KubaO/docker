@@ -1,3 +1,3 @@
 [Unit]
 Description=Install Foreman And Exit
-Requires=multi-user.target
+Requires=basic.target
