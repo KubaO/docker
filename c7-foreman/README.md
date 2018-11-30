@@ -8,13 +8,16 @@ instead.
 ## Compose Quickstart
 
     $ docker-compose build foreman
-    $ docker-compose run foreman
+    $ docker-compose run --service-ports foreman
 
 ## Direct Quickstart
 
     $ docker build .
-    $ docker run --rm -it --hostname c7-foreman.local --tmpfs /run --cap-add SYS_ADMIN .
+    $ docker run --rm -Pit --hostname c7-foreman.local --tmpfs /run --cap-add SYS_ADMIN .
 
 ## Notes
 
-This will run the docker installer first :/.
+Connect to https://localhost:9443 to access the web ui.
+
+This will run the docker installer first, but all the packages should be already downloaded - so
+it will be quick-ish.
