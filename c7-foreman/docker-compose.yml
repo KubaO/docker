@@ -3,7 +3,7 @@ services:
     foreman:
         build:
           context: .
-        image: c7-foreman
+        image: kubao/c7-foreman
         hostname: foreman.local
         cap_add: [SYS_ADMIN]
         tmpfs:
