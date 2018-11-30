@@ -19,6 +19,6 @@ RUN yum clean all
 COPY system/* /etc/systemd/system/
 RUN systemctl enable foreman-installer.service
 
-EXPOSE 8443 8140
+EXPOSE 443 8443 8140
 
 CMD ["/usr/sbin/init", "--unit", "foreman-install.target"]

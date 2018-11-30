@@ -8,4 +8,7 @@ services:
         cap_add: [SYS_ADMIN]
         tmpfs:
           - /run
-        ports: ["8443:8443", "8140:8140"]
+        ports:
+          - "9443:443"
+          - "8443:8443"
+          - "8140:8140"
