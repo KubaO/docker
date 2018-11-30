@@ -1,0 +1,19 @@
+#! /usr/bin/env bash
+false && yum -y upgrade
+yum -y install \
+	https://yum.puppetlabs.com/puppet5/puppet5-release-el-7.noarch.rpm \
+	http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
+	https://yum.theforeman.org/releases/1.20/el7/x86_64/foreman-release.rpm \
+	centos-release-scl-rh foreman-release-scl \
+	foreman foreman-cli foreman-postgresql foreman-proxy foreman-debug foreman-installer \
+	apr apr-util centos-logos copy-jdk-configs efivar-libs file freetype gettext \
+	grub2-efi-x64 grub2-efi-x64-modules grub2-tools grub2-tools-extra httpd httpd-tools initscripts \
+	iproute iptables java javapackages-tools \
+	libcroco libeio libev libgomp libjpeg-turbo libmnl libnetfilter_conntrack \
+	libnfnetlink libunistring libxslt \
+	lksctp-tools mailcap make mod_passenger mod_ssl mokutil mtools openssl os-prober passenger \
+	postgresql postgresql-server puppet-agent-oauth puppetserver python-javapackages python-lxml \
+	rubygem-daemon_controller shim shim-x64 syslinux sysvinit-tools tcp_wrappers-libs \
+	tfm-rubygem-passenger-native tftp-server tzdata-java xinetd
+yum clean all
+rm -rf /var/cache/yum
