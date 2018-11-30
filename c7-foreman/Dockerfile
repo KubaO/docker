@@ -17,6 +17,7 @@ RUN yum clean all
 #RUN yum -y upgrade systemd
 
 COPY system/* /etc/systemd/system/
+RUN chmod 0444 /etc/systemd/system/foreman-*
 RUN systemctl enable foreman-installer.service
 
 EXPOSE 443 8443 8140
