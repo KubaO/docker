@@ -1,0 +1,3 @@
+* text=auto
+c7-foreman/preinstall text eol=lf
+c7-foreman/foreman-install.* text eol=lf
