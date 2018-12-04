@@ -3,8 +3,10 @@ false && yum -y upgrade
 yum -y install \
 	https://yum.puppetlabs.com/puppet5/puppet5-release-el-7.noarch.rpm \
 	http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
-	https://yum.theforeman.org/releases/1.20/el7/x86_64/foreman-release.rpm \
-	centos-release-scl-rh foreman-release-scl \
+	https://yum.theforeman.org/releases/1.20/el7/x86_64/foreman-release.rpm
+yum -y install \
+	centos-release-scl-rh foreman-release-scl
+yum -y install \
 	foreman foreman-cli foreman-postgresql foreman-proxy foreman-debug foreman-installer \
 	apr apr-util centos-logos copy-jdk-configs efivar-libs file freetype gettext \
 	grub2-efi-x64 grub2-efi-x64-modules grub2-tools grub2-tools-extra httpd httpd-tools initscripts \
